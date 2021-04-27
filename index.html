@@ -3,9 +3,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <title>MS Work Day Scheduler</title>
 </head>
 <body>
+    <!-- header -->
+    <header class="jumbotron container-fluid text-center custom-header">
+        <h1 class="display-5">MS Work Day Scheduler</h1>
+        <p class="lead">
+            Simple calender app to record work day schedule <br>
+            <span id="date-time">00:00:00</span>
+        </p>
+    </header>
+    <!-- notification area -->
+    <section class="text-center msg">Appointment added to <code>local storage</code> ✔️</section>
+
+    <!-- hours added by jscript -->
+    <div class="container" id=hr-container></div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
