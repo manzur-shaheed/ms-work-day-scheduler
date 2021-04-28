@@ -55,11 +55,15 @@ function loadSavedSchedule() {
 function updateHourColor() {
     // get current hour
     var currentHr = moment().hours();
-    // console.log(currentHr);
+    console.log(currentHr);
 
     // check against each hour block for past, present, future
     for (hr = 9; hr < 18; hr++) {
         txtAreaID = "txt-" + hr.toString();
+        // remove any added class
+        $('textarea#'+txtAreaID).removeClass("past");
+        $('textarea#'+txtAreaID).removeClass("present");
+        $('textarea#'+txtAreaID).removeClass("future");
         // past 
         if (hr < currentHr) {
             $('textarea#'+txtAreaID).addClass("past");
