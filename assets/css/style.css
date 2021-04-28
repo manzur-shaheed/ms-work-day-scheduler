@@ -18,7 +18,7 @@ body {
 
 /* msg area */
 .msg {
-    /* display: none; */
+    display: none;
     padding-bottom: 10px;
     color: #252525;
 }

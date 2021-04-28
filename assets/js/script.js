@@ -46,7 +46,7 @@ function loadSavedSchedule() {
 
     for (hr = 9; hr < 18; hr++) {
         txtAreaID = "txt-" + hr.toString();
-        $(txtAreaID).val(localStorage.getItem(txtAreaID));
+        $('textarea#'+txtAreaID).val(localStorage.getItem(txtAreaID));
     }
 }
 
@@ -62,8 +62,17 @@ function saveSchedule() {
 
     // get the ID and text of the textarea
     txtAreaID = $(this).siblings()[1].id;  
-    schedTxt = $(txtAreaID).val();
+    schedTxt = $('textarea#'+txtAreaID).val();
     console.log(txtAreaID, schedTxt); 
+
+    // save data in localStorage
+    localStorage.setItem(txtAreaID, schedTxt);
+
+    // show in message area for 5sec
+    $('.msg').addClass('show');
+    setTimeout(function() {
+        $('.msg').removeClass('show');
+    }, 5000);
 }
 
 // function docHandler
