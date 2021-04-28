@@ -50,11 +50,13 @@ body {
 
 /* text area */
 textarea {
+    font-family: Arial, Helvetica, sans-serif;
     background: transparent;
     border: none;
     resize: none;
-    color: #252525;
+    color: #060303;
     border-left: 1px solid black;
+    border-top: 1px solid whitesmoke;
     padding: 10px;
     white-space: pre;
 }
@@ -66,4 +68,17 @@ textarea {
     border-bottom-right-radius: 15px;
     background-color: #19cdf5;
     color: white;
+}
+
+/* schedule time compared to time of the day */
+.past {
+    background-color: #bab5b5;
+}
+
+.present {
+    background-color: #d2e180;
+}
+
+.future {
+    background-color: #adb2e8;
 }
